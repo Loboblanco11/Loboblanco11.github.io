@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guiruguiruguiru - Token Meme</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1f2833; /* Fondo oscuro */
+            color: #eaeaea; /* Color de texto */
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+            background-color: #0b0c10; /* Barra superior oscura */
+        }
+
+        h1, h2, h3 {
+            color: #66fcf1; /* Color de encabezados */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #45a29e; /* Color de enlaces */
+            text-decoration: none;
+        }
+
+        .faq-item .answer {
+            display: none;
+            margin-top: 10px;
+            color: #c5c6c7; /* Color de respuestas de FAQ */
+        }
+
+        .faq-item.active .answer {
+            display: block;
+        }
+
+        /* Botón flotante */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #45a29e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Agrega otros estilos según necesites */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>guiruguiruguiru - Token Meme</h1>
+    </header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador de Airdrop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #countdownTimer {
+            font-size: 24px;
+            color: #ff0000; /* Color rojo para resaltar */
+        }
+    </style>
+</head>
+<body>
+    <h1>Reclamar Airdrop</h1>
+    <h2 id="countdownTimer"></h2>
+
+    <script>
+        // Fecha actual
+        var now = new Date().getTime();
+
+        // Fecha límite: 15 días desde la fecha actual
+        var deadline = new Date(now + 15 * 24 * 60 * 60 * 1000).getTime();
+
+        // Actualizar el temporizador cada segundo
+        var x = setInterval(function() {
+            // Obtener la fecha y hora actual
+            var currentTime = new Date().getTime();
+
+            // Calcular la diferencia entre la fecha límite y la fecha actual
+            var distance = deadline - currentTime;
+
+            // Calcular días, horas, minutos y segundos restantes
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Mostrar el temporizador en el elemento con id="countdownTimer"
+            document.getElementById("countdownTimer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // Si el temporizador llega a cero, mostrar un mensaje
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdownTimer").innerHTML = "¡Airdrop disponible!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#roadmap">Hoja de Ruta</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>Acerca de guiruguiruguiru</h2>
+            <p>¡Descubre el universo de guiruguiruguiru, el token meme inspirado en el personaje de Dragon Ball, Giru!</p>
+            <p>guiruguiruguiru es un token meme creado con la ayuda de ChatGPT para la comunidad de fans de Dragon Ball. ¡Únete a nosotros y sé parte de la aventura guiruguiruguiru!</p>
+        </section>
+        <section id="roadmap">
+            <h2>Hoja de Ruta</h2>
+            <p>La distribución del token guiruguiruguiru se realizará de la siguiente manera:</p>
+            <ul>
+                <li>Suministro total de tokens: 42,100,000,000,000</li>
+                <li>Lanzamiento aéreo: 10% del suministro total (4,210,000,000,000 tokens)</li>
+                <li>Preventa: 20% del suministro total (8 ,420 ,000 ,000 ,000 tokens)</li>
+                <li>Comercialización y desarrollo de la comunidad: 55% del suministro total (23 ,155 ,000 ,000 ,000 tokens)</li>
+<li>marketing y colaboración:10% de suministro total (4 ,210 ,000 ,000 ,000 tokens)</li>
+<li>equipo de desarrollo :5% de suministro total (2 ,105 ,000 ,000 ,000 tokens)</li>
+            </ul>
+        </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Distribución de Tokens</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="tokenDistributionChart" width="400" height="400"></canvas>
+
+    <script>
+        var ctx = document.getElementById('tokenDistributionChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Lanzamiento Aéreo', 'Preventa', 'Marketing', 'Equipo de Desarrollo', 'Comercialización y Desarrollo de la Comunidad'],
+                datasets: [{
+                    label: 'Distribución de Tokens',
+                    data: [10, 20, 10, 5, 55],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Distribución de Tokens'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer(this)">¿Cuál es el propósito de guiruguiruguiru?</h3>
+                <div class="answer">
+<img src="https://static.wikia.nocookie.net/dragonball/images/c/c7/Gill_en_Dragon_Ball_GT.png/revision/latest?cb=20220314091005&path-prefix=es" alt="Gill en Dragon Ball GT">
+
+                    <p>guiruguiruguiru fue creado como un token meme para proporcionar entretenimiento y una comunidad divertida inspirada en el personaje de Dragon Ball, Giru. Buscamos conectar a los fans y crear un espacio donde puedan compartir memes, participar en eventos y colaborar en proyectos relacionados con Dragon Ball.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer(this)">¿Cómo puedo obtener guiruguiruguiru?</h3>
+                <div class="answer">
+<img src="https://static.wikia.nocookie.net/dragonball/images/5/5c/GiruS2.png/revision/latest?cb=20130822235333&path-prefix=es" alt="Giru de Dragon Ball">
+
+                    <p>Actualmente, puedes obtener guiruguiruguiru participando en nuestro lanzamiento aéreo y preventa. Mantente atento a nuestras redes sociales y sitio web para obtener más información sobre cómo adquirir guiruguiruguiru en el futuro.</p>
+                </div>
+            </div>
+        <div class="faq-item">
+                <h3 onclick="toggleAnswer(this)">¿Cómo funciona el proyecto ?</h3>
+                <div class="answer">
+<p>El proyecto Guiruguiruguiru es una plataforma de criptomonedas que tiene como objetivo proporcionar a los usuarios una experiencia de token único y atractivo en el ecosistema de las finanzas descentralizadas (DeFi). El token Guiruguiruguiru, con el símbolo Guiru, se basa en la red de Binance Smart Chain (BSC) y está diseñado para ofrecer una serie de características distintivas:
+<br><br>
+<li><stron>Distribución de Impuestos:</stron> El proyecto implementa un sistema de impuestos en las transacciones de compra, venta y transferencia. El 4% de cada transacción de compra y venta se destina a la billetera del creador del contrato, mientras que el 2% de las transferencias se gravan con impuestos.</li>
+<br><br>
+<li><stron>Recompensas para Titulares:</stron> Los titulares de Guiruguiruguiru son recompensados con un 2% de cada transacción de compra y venta, que se distribuyen proporcionalmente entre todos los titulares de tokens.</li>
+<br><br>
+<li><stron>Seguridad y Transparencia:</stron> El proyecto se basa en la red de Binance Smart Chain, que ofrece seguridad y velocidad en las transacciones. Además, la implementación del contrato inteligente se hace de manera transparente y pública para garantizar la confianza de la comunidad.</li>
+<br><br>
+<li><stron>Participación de la Comunidad: </stron>El proyecto fomenta la participación activa de la comunidad en su desarrollo y crecimiento. Los titulares de tokens tienen voz en las decisiones importantes relacionadas con el proyecto a través de votaciones y propuestas.</li>
+<br><br>
+En resumen, el proyecto Guiruguiruguiru busca ofrecer a los usuarios una experiencia única en el mundo de las criptomonedas, con un enfoque en la transparencia, la seguridad y la participación de la comunidad.</p>
+
+
+
+
+        </section>
+    </main>
+    <footer>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace a Twitter</title>
+    <style>
+        /* Estilo para el enlace a Twitter */
+        a.twitter-link {
+            color: #1DA1F2; /* Color azul de Twitter */
+            text-decoration: none; /* Elimina la subrayado predeterminado */
+        }
+
+        /* Cambiar el color al pasar el cursor sobre el enlace */
+        a.twitter-link:hover {
+            color: #0e71a0; /* Cambiar a un tono más oscuro al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <a href="https://x.com/CristianFr37552/status/1753432050558759290?s=20" class="twitter-link">x-Tweet</a>
+   <a href="https://discord.com/invite/e8YwXmFRnA" class="discord-link">Discord</a>
+</body>
+</html>
+
+
+        <p>Derechos de autor © 2024 guiruguiruguiru</p>
+    </footer>
+
+    <!-- Botón de enlace a Telegram -->
+    <a href="https://t.me/guirutoken" class="floating-button">Telegram</a>
+
+    <script>
+        function toggleAnswer(element) {
+            element.parentElement.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
